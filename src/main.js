@@ -210,7 +210,7 @@ const store = createStore({
 
 // Routing to different urls using vue-router
 const router = createRouter({
-    history: createWebHistory(),
+    history: hash,
     routes: [
         {
             path: '/', component: App
