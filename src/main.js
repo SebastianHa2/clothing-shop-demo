@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import  { createRouter, createWebHistory } from 'vue-router'
+import  { createRouter, createWebHashHistory} from 'vue-router'
 import {createStore} from 'vuex'
 
 // Importing components that are through routing and in more than one components
@@ -210,7 +210,7 @@ const store = createStore({
 
 // Routing to different urls using vue-router
 const router = createRouter({
-    history: hash,
+    history: createWebHashHistory(),
     routes: [
         {
             path: '/', component: App
