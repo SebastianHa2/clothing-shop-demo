@@ -12,7 +12,7 @@
                     <input type="password" placeholder="Password" v-model="enteredPassword" @focus="invalid=''">
                 </div>
                 <button @click="verifyUser">Sign in</button>
-                <p>Don't have an account? <a href="#" @click="goToRegistration">Register</a></p>
+                <p>Don't have an account? <a href="#registration" @click="hide">Register</a></p>
                 <p><a href="#">Forgot Password</a></p>
             </div>
             <div class="signed-in" v-else>
@@ -38,10 +38,6 @@ export default {
     },
     inject: ['hide'],
     methods: {
-        goToRegistration() {
-            this.hide()
-            this.$router.push({name: 'registration', hash: 'registration'})
-        },
         verifyUser() {
             this.$store.state.registeredUsers.forEach(user => {
                 if(user.userEmail === this.enteredEmail){

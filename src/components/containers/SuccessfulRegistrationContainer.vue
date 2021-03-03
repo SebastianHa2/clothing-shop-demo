@@ -4,7 +4,7 @@
             <div class="successful-registration">
                 <h1>Congratulations!</h1>
                 <h3>You've registered successfully</h3>
-                <button @click="$router.push({name: 'main', hash: 'main'})">Go shopping</button>
+                <button><a href="#">Go shopping</a></button>
             </div>
         </template>
     </base-cover>
@@ -40,6 +40,10 @@
                 background-color: #000;
                 color: #fff;
                 cursor: pointer;
+            }
+
+            a{
+                color: #000;
             }
         }
     }
