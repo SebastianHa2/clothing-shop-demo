@@ -4,7 +4,7 @@
             <i v-if="background" class="fas fa-times" @click="showNavBar = false"></i>
             <div class="nav-background" :class="{slide: background}"></div>
                 <ul @mouseenter="slideBackground" :class="{colorBg: background}">
-                    <li class="sex-selection"><a href="#" @click="$router.push('/man')">MAN</a> | <a href="#" @click="$router.push('/woman')">WOMAN</a></li>
+                    <li class="sex-selection"><a href="#" @click="$router.push({name: 'man', hash: 'man'})">MAN</a> | <a href="#" @click="$router.push({name: 'woman', hash: 'woman'})">WOMAN</a></li>
                     <li>Sale</li>
                     <li>New</li>
                     <li @click="makeActive('clothing')">Clothing</li>

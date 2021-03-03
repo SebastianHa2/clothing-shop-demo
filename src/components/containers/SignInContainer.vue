@@ -40,7 +40,7 @@ export default {
     methods: {
         goToRegistration() {
             this.hide()
-            this.$router.push('/registration')
+            this.$router.push({name: 'registration', hash: 'registration'})
         },
         verifyUser() {
             this.$store.state.registeredUsers.forEach(user => {

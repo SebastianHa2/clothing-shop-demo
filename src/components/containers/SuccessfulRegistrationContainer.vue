@@ -4,7 +4,7 @@
             <div class="successful-registration">
                 <h1>Congratulations!</h1>
                 <h3>You've registered successfully</h3>
-                <button @click="$router.push('/')">Go shopping</button>
+                <button @click="$router.push({name: 'main', hash: 'main'})">Go shopping</button>
             </div>
         </template>
     </base-cover>
